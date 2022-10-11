@@ -7,7 +7,6 @@ class CreateEmployeeComponent extends Component {
         super(props)
 
         this.state = {
-            // step 2
             id: this.props.match.params.id,
             firstName: '',
             lastName: '',
@@ -18,10 +17,8 @@ class CreateEmployeeComponent extends Component {
         this.saveOrUpdateEmployee = this.saveOrUpdateEmployee.bind(this);
     }
 
-    // step 3
     componentDidMount(){
 
-        // step 4
         if(this.state.id === '_add'){
             CompanyService.getCompanyDetails().then((res) =>{
                 let companyDetails= res.data;
